@@ -4,5 +4,5 @@ package proxy;
 public interface TimetableTrains {
     String[] getTimetable();
 
-    String getTrainDepartureTime(String value);
+    String getTrainDepartureTime(String trainId);
 }

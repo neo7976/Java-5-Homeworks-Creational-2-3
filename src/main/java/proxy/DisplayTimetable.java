@@ -2,7 +2,8 @@ package proxy;
 
 //3 Клиентский класс
 public class DisplayTimetable {
-    private TimetableTrains timetableTrains = new TimetableElectricTrains();
+//    private TimetableTrains timetableTrains = new TimetableElectricTrains(); // Когда не было заместителя
+    private final TimetableTrains timetableTrains = new TimetableElectricTrainsProxy(); //Когда добавили заместитель
 
     public void printTimetable() {
         String[] timetable = timetableTrains.getTimetable();
@@ -13,4 +14,5 @@ public class DisplayTimetable {
             System.out.printf("%s\t%s\t%s\t\t%s\t\t\t\t%s\t\t\t%s\n", tmpArr[0], tmpArr[1], tmpArr[2], tmpArr[3], tmpArr[4], tmpArr[5]);
         }
     }
+
 }
